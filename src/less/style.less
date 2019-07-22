@@ -13,7 +13,6 @@
 @inputA:#8288a2;
 @black:#000000;
 @placeholderBluelight:#b8bed8;
-@redErrorInput=#ff0000;
 
 
 //common properties button
@@ -50,10 +49,10 @@
 			height:57px;
 			color: @white;
 			&:hover{
-				background-color: @blueHover;
+				background-color: @blueHover !important;
 			}
 			&:active{
-				background-color: @bluePressed;
+				background-color: @bluePressed !important;
 			}
 			
 		}
@@ -121,7 +120,7 @@ body{
 				margin-bottom: 0;
 				clip-path: url(#tabShape);
 				&:hover{
-					color: @blue;
+					color: @blue !important;
 				}
 			}
 			.button-map{
@@ -139,7 +138,7 @@ body{
 				margin-bottom: 0;
 				clip-path: url(#tabShape);
 				&:hover{
-					color: @blue;
+					color: @blue !important;
 				}
 			}
 
@@ -148,7 +147,6 @@ body{
 
 	.data-from-user-section{	
 		margin-left: 20px;
-		padding-left: 15px;
 		padding-top: 25px;
 		padding-right:15px;
 		grid-template-columns: repeat(2,1fr);
@@ -171,10 +169,10 @@ body{
 				color: @placeholderBluelight;
 			}
 			&:hover{
-				border: 1px solid @inputH;
+				border: 1px solid @inputH !important;
 			}
 			&:focus{
-				border: 1px solid @inputA;
+				border: 1px solid @inputA !important;
 
 			}
 		}
@@ -184,10 +182,10 @@ body{
 			resize: none;
 			border: 1px solid @lightBlueInput;
 			&:hover{
-				border: 1px solid @inputH;
+				border: 1px solid @inputH !important;
 			}
 			&:focus{
-				border: 1px solid @inputA;
+				border: 1px solid @inputA !important;
 
 			}
 		}
