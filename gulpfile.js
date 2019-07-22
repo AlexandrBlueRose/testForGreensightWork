@@ -14,7 +14,7 @@ gulp.task('less', function() { // Создаем таск Sass
     return gulp.src('src/less/**/*.less') // Берем источник
         .pipe(less()) // Преобразуем Sass в CSS посредством gulp-sass
         // @ts-ignore
-        .pipe(autoprefixer(['last 25 versions'], { cascade: true })) // Создаем префиксы
+        .pipe(autoprefixer({grid:true,overrideBrowserslist:['last 25 versions']}, { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('src/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });

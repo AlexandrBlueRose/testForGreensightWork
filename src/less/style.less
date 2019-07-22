@@ -85,8 +85,8 @@ body{
 	background-color: @backgroundColor;
 	.all-content{
 		//margin: 0 auto;
-		max-width: 150vh;
-		margin: 0 80px 10px 30px;
+		max-width: 1000px;
+		margin: 0 100px 10px 100px;
 		.button-send;
 		background-color: @white;
 	}
@@ -106,8 +106,8 @@ body{
 				
 			}
 			
-			padding: 40px 20px 0px 30px;
-			position: relative;//??
+			padding: 40px 20px 0px 100px;
+			position: relative;
 			.button-delivery-data{
 				.insertion-button;
 				
@@ -120,6 +120,8 @@ body{
 				z-index: 2;
 				color: @blue;
 				margin-bottom: 0;
+				
+  position: relative;
 				clip-path: url(#tabShape);
 				&:hover{
 					color: @blue !important;
@@ -139,6 +141,7 @@ body{
 				z-index: 1;
 				margin-bottom: 0;
 				clip-path: url(#tabShape);
+				position: relative;
 				&:hover{
 					color: @blue !important;
 				}
@@ -152,11 +155,11 @@ body{
 		display: grid;
 		margin-left: 21px;
 		padding-top: 25px;
-		padding-right:15px;
-		-ms-grid-template-columns: 1fr,1fr;
+		padding-right:21px;
+
 		grid-template-columns: 1fr,1fr;
-		-ms-grid-gap: 40px 10px;
-		grid-gap: 40px 10px;
+		grid-column-gap:10px;
+		grid-row-gap:40px;
 		p{
 			margin: 0%;
 			width: max-content;
@@ -222,7 +225,7 @@ body{
 		margin-left: 21px;
 		background-color: @white;
 		#map{
-			height: 50vh;
+			height: 550px;
 		}
 	}
 }

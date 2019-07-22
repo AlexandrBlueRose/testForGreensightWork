@@ -23,8 +23,8 @@ body {
   background-color: #f6f6f6;
 }
 body .all-content {
-  max-width: 150vh;
-  margin: 0 80px 10px 30px;
+  max-width: 1000px;
+  margin: 0 100px 10px 100px;
   background-color: #ffffff;
 }
 body .all-content .button-block {
@@ -75,7 +75,7 @@ body .main-header h1 {
   margin: auto 0;
 }
 body .main-header .buttons {
-  padding: 40px 20px 0px 30px;
+  padding: 40px 20px 0px 100px;
   position: relative;
 }
 body .main-header .buttons span {
@@ -101,6 +101,7 @@ body .main-header .buttons .button-delivery-data {
   z-index: 2;
   color: #212bff;
   margin-bottom: 0;
+  position: relative;
   -webkit-clip-path: url(#tabShape);
           clip-path: url(#tabShape);
 }
@@ -132,19 +133,21 @@ body .main-header .buttons .button-map {
   margin-bottom: 0;
   -webkit-clip-path: url(#tabShape);
           clip-path: url(#tabShape);
+  position: relative;
 }
 body .main-header .buttons .button-map:hover {
   color: #212bff !important;
 }
 body .data-from-user-section {
+  display: -ms-grid;
   display: grid;
   margin-left: 21px;
   padding-top: 25px;
-  padding-right: 15px;
-  -ms-grid-template-columns: 1fr,1fr;
+  padding-right: 21px;
+  -ms-grid-columns: 1fr,1fr;
   grid-template-columns: 1fr,1fr;
-  -ms-grid-gap: 40px 10px;
-  grid-gap: 40px 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 40px;
 }
 body .data-from-user-section p {
   margin: 0%;
@@ -217,5 +220,5 @@ body .form-map-section {
   background-color: #ffffff;
 }
 body .form-map-section #map {
-  height: 50vh;
+  height: 550px;
 }

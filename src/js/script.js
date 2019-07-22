@@ -7,34 +7,24 @@ ymaps.ready(init);
 	function init() {
     var myMap = new ymaps.Map("map", {
             center: [55.76, 37.64],
-            zoom: 10
+						zoom: 10,
+						controls: ['zoomControl']
         }, {
-            //searchControlProvider: 'yandex#search'
-        }),
-
-    // Создаем геообъект с типом геометрии "Точка".
-        myGeoObject = new ymaps.GeoObject({
-            // Описание геометрии.
-            geometry: {
-                type: "Point",
-                coordinates: []
-            },
-            // Свойства.
-            properties: {
-                // Контент метки.
-                iconContent: '',
-                hintContent: ''
-            }
-        }, {
-            // Опции.
-            // Иконка метки будет растягиваться под размер ее содержимого.
-            preset: 'islands#blackStretchyIcon',
-            // Метку нелзя перемещать.
-            draggable: false
-        })
+            searchControlProvider: 'yandex#search'
+				}),
+				// Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+					'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+			);
+			myMap.controls.add('zoomControl', {
+	float: 'none',
+	position: {
+			right:40,
+			top: 5
+	}
+});
 
     myMap.geoObjects
-        .add(myGeoObject)
         .add(new ymaps.Placemark([55.801131, 37.508167], {
             balloonContent: 'цвет <strong>воды пляжа бонди</strong>'
         }, {
@@ -65,11 +55,12 @@ $(".button-delivery-data").click(function() {
 		if(!regexp.test($(".name-to-send").val())) {
 				e.preventDefault();
 				$(".name-to-send").css({"border":"1px solid #ff0000"})
-				//$(".data-phone").append('<span style="color:#ff0000">Error message</span>');
+				$(".data-name-block").html('<p>ФИО</p><input type="text" class="name-to-send" value placeholder="Только кириллца"><span style="color:#ff0000">Error message</span>');
 				return false;
 		}else{
 			if(isEmpty($(".name-to-send").val())){
 				$(".name-to-send").css({"border":"1px solid #ff0000"})
+				$(".data-name-block").html('<p>ФИО</p><input type="text" class="name-to-send" value placeholder="Только кириллца"><span style="color:#ff0000">Error message</span>');
 			 }else{
 		 
 				$(".name-to-send").css({"border":"1px solid #dadef0"})
