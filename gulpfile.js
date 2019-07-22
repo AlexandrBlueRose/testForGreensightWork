@@ -7,13 +7,14 @@ var gulp       = require('gulp'), // Подключаем Gulp
     rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
     del          = require('del'), // Подключаем библиотеку для удаления файлов и папок
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
-    autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+		autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+		//var autoprefixer = require('autoprefixer-core');
 
 gulp.task('less', function() { // Создаем таск Sass
     return gulp.src('src/less/**/*.less') // Берем источник
         .pipe(less()) // Преобразуем Sass в CSS посредством gulp-sass
         // @ts-ignore
-        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+        .pipe(autoprefixer(['last 25 versions'], { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('src/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });

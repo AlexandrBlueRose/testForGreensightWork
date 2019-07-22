@@ -23,6 +23,7 @@ body {
   background-color: #f6f6f6;
 }
 body .all-content {
+  max-width: 150vh;
   margin: 0 80px 10px 30px;
   background-color: #ffffff;
 }
@@ -47,10 +48,14 @@ body .all-content .button-block .send-data {
   font-family: inherit;
   text-decoration: none;
   background-color: #212bff;
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  -webkit-border-top-right-radius: 2rem;
+          border-top-right-radius: 2rem;
+  -webkit-border-bottom-right-radius: 2rem;
+          border-bottom-right-radius: 2rem;
+  -webkit-border-top-left-radius: 2rem;
+          border-top-left-radius: 2rem;
+  -webkit-border-bottom-left-radius: 2rem;
+          border-bottom-left-radius: 2rem;
   width: 208px;
   height: 57px;
   color: #ffffff;
@@ -207,7 +212,8 @@ body .data-from-user-section .item-input:nth-child(4) {
 }
 body .form-map-section {
   display: none;
-  padding: 10px 30px 10px 31px;
+  padding: 25px 15px 0 0;
+  margin-left: 21px;
   background-color: #ffffff;
 }
 body .form-map-section #map {

@@ -23,6 +23,7 @@ body {
   background-color: #f6f6f6;
 }
 body .all-content {
+  max-width: 150vh;
   margin: 0 80px 10px 30px;
   background-color: #ffffff;
 }
@@ -177,7 +178,8 @@ body .data-from-user-section .item-input:nth-child(4) {
 }
 body .form-map-section {
   display: none;
-  padding: 10px 30px 10px 31px;
+  padding: 25px 15px 0 0;
+  margin-left: 21px;
   background-color: #ffffff;
 }
 body .form-map-section #map {
