@@ -1,0 +1,223 @@
+// Colors
+@backgroundColor:#f6f6f6;
+@white:#ffffff;
+@blue:#212bff;
+@blueHover:#2029ea;
+@bluePressed:#1e26d8;
+@lightBlack:#3f3f3f;
+@lightGray:#edeeef;
+@darkGray:#8288a2;
+@lightBlueInput:#dadef0;
+@inputNoH:#dadef0;
+@inputH:#c3c9db;
+@inputA:#8288a2;
+@black:#000000;
+@placeholderBluelight:#b8bed8;
+@redErrorInput=#ff0000;
+
+
+//common properties button
+.insertion-button(){
+	display: inline-block;
+	position: inherit;
+	outline:none;
+	font-size: 13pt;
+	text-align:centr;
+	font-family: 'Montserrat', sans-serif;;	
+	position: inherit;
+	text-decoration: none;
+	border:none;
+}
+.button-send(){
+	.button-block{
+		padding: 10px 30px 10px 30px;
+		display: inherit;
+		flex-direction: row;
+		justify-content: flex-end;
+		padding-top:4%;
+		.send-data{
+			border:none;
+			outline:none;
+			font-size: 14pt;
+			font-family: inherit;
+			text-decoration: none;
+			background-color: @blue;
+			border-top-right-radius: 2rem;
+			border-bottom-right-radius: 2rem;
+			border-top-left-radius: 2rem;
+			border-bottom-left-radius: 2rem;
+			width:208px;
+			height:57px;
+			color: @white;
+			&:hover{
+				background-color: @blueHover;
+			}
+			&:active{
+				background-color: @bluePressed;
+			}
+			
+		}
+	}
+	
+}
+.grid{
+	display: grid;
+}
+
+.button-delivery-data:checked~.body{
+	background-color: rgb(0, 0, 0);
+}
+body{
+	/*
+	.all-content>section 
+		display: none;
+	
+	.main-header>.buttons>button[for*="1"]:before 
+		content: "\f19a";
+	
+	.main-header>.buttons>button[for*="2"]:before 
+		content: "\f17a";
+	
+	.main-header>.buttons>.button-delivery-data:checked~.data-from-user-section, .main-header>.buttons>.button-map:checked~.form-map-section 
+		display: block;
+	*/
+	font-family: 'Montserrat', sans-serif;
+	background-color: @backgroundColor;
+	.all-content{
+		//margin: 0 auto;
+		margin: 0 80px 10px 30px;
+		.button-send;
+		background-color: @white;
+	}
+	
+	
+	.main-header{
+		width:83.3%;
+		font-family: inherit;	
+		h1{
+			padding: 20px 20px 30px 30px;
+			margin: auto 0;
+		}
+		.buttons{
+				
+			span{
+				padding-right:20%;
+				
+			}
+			
+			padding: 40px 20px 0px 30px;
+			position: relative;//??
+			.button-delivery-data{
+				.insertion-button;
+				
+				background-color:@white;
+				max-width: 170px;
+				height: 64px;
+				width: 100%;
+				margin:5px 0px;		
+				transform-origin: 50% 100% 0;
+				z-index: 2;
+				color: @blue;
+				margin-bottom: 0;
+				clip-path: url(#tabShape);
+				&:hover{
+					color: @blue;
+				}
+			}
+			.button-map{
+				.insertion-button;
+				box-shadow: 2px 0px #dbdcdd;
+				background-color: @lightGray;
+				color:@darkGray;
+				max-width: 180px;
+				height: 64px;
+				width: 100%;
+				margin:5px 0px;		
+				transform-origin: 50% 100% 0;
+				margin-left: -3.5%;
+				z-index: 1;
+				margin-bottom: 0;
+				clip-path: url(#tabShape);
+				&:hover{
+					color: @blue;
+				}
+			}
+
+		}
+	}
+
+	.data-from-user-section{	
+		margin-left: 20px;
+		padding-left: 15px;
+		padding-top: 25px;
+		padding-right:15px;
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: 40px 10px;
+		p{
+			margin: 0%;
+			width: max-content;
+			height: min-content;
+			font-size: 14pt;
+			font-family: inherit;
+			color: @lightBlack;
+		}
+		input{
+			outline:none;
+			font-size: 16pt;
+			border: 1px solid @inputNoH;
+			height: 55px;
+			color:@black;
+			&::placeholder{
+				color: @placeholderBluelight;
+			}
+			&:hover{
+				border: 1px solid @inputH;
+			}
+			&:focus{
+				border: 1px solid @inputA;
+
+			}
+		}
+		textarea{
+			outline:none;
+			height: 110px;
+			resize: none;
+			border: 1px solid @lightBlueInput;
+			&:hover{
+				border: 1px solid @inputH;
+			}
+			&:focus{
+				border: 1px solid @inputA;
+
+			}
+		}
+		.item-input{
+			position: relative;
+			padding: 0 10px 0 10px;
+			&:nth-child(1){
+					
+			}
+			&:nth-child(2){
+
+			}
+			&:nth-child(3){
+				grid-column: ~"1/3"; 
+			}
+			&:nth-child(4){
+				grid-column:~"1/3"; 
+			}
+		}
+		
+
+	}
+	.form-map-section{
+		display:none;
+		padding: 10px 30px 10px 30px;
+		margin-left:20px;
+		background-color: @white;
+		#map{
+			height: 50vh;
+		}
+	}
+}
+

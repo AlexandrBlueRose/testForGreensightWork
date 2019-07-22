@@ -1,0 +1,201 @@
+@margin-height:3%; 
+@margin-width:8.4%;
+body{
+	font-family: 'Montserrat', sans-serif;
+	display:flex;
+	background-color: #f6f6f6;
+	font-family: 'Montserrat', sans-serif;
+	input{
+		font-size: 16pt;
+		border: 1px solid #b8bed8;
+	}
+	.all-content{
+		flex-direction: column;
+		justify-content: center;
+		min-height:600px;
+		max-width: 1200px;
+		width:83.3%;
+		margin: 0 auto;
+		header{
+			font-family: inherit;
+			display:flex;
+			flex-direction:column;
+			height: max-content;
+			
+			.head{
+				@media (max-width: 200px) {
+			 		font-size:80%
+				}
+				font-family: inherit;
+				font-size: 31pt
+			}
+			.content-body{
+				
+				.buttons{
+					position: relative;
+					.button-delivery-data{
+						outline:none;
+						font-size: 14pt;
+						font-family: inherit;
+						position: inherit;
+						text-decoration: none;
+						border:none;
+						box-shadow: 2px 0px #dbdcdd;
+						display: inline-block;
+						background-color: rgb(255, 255, 255);
+						max-width: 142px;
+						height: 64px;
+						width: 100%;
+						padding: 10px 20px;
+						margin:5px 0px;		
+						transform-origin: 50% 100% 0;
+						border-right: 1px solid rgba(28,110,164,0.2);
+						border-radius: 0px 20px 0px 0px;
+						z-index: 2;
+						position: inherit;
+						color: #212bff;
+						margin-bottom: 0;
+						&::after {
+							
+						}
+					}
+					.button-map{
+						outline:none;
+						font-size: 14pt;
+						font-family: inherit;
+						position: inherit;
+						text-decoration: none;
+						border: none;
+						box-shadow: 2px 0px #dbdcdd;
+						display: inline-block;
+						background-color: #8288a2;
+						color:#5a5c61;
+						max-width: 142px;
+						height: 64px;
+						width: 100%;
+						padding: 10px 20px;
+						margin:5px 0px;		
+						transform-origin: 50% 100% 0;
+						border-right: 1px solid rgba(28,110,164,0.2);
+						border-radius: 0px 20px 0px 0px;
+						margin-left: -2%;
+						z-index: 1;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		.data-from-user {
+			background-color: #ffffff;
+			.internal-block{
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				padding-top: 3%;
+				padding-left: 3%;
+				padding-right: 3%;
+				.data-phone-name-block{
+						height: 4.7%;
+						display: inherit;
+						flex-direction: column;
+						flex-wrap: inherit;
+						width: 50%;
+
+						.name-to-send{
+							
+							min-height: 54px;
+							height: 90%;
+							width: 90%;
+
+						}
+						.phone-so-send{
+						
+							min-height: 54px;
+							width:100%;
+						}
+						p{
+							margin: 0%;
+							width: max-content;
+							height: min-content;
+							font-size: 14pt;
+							font-family: inherit;
+						}
+					}
+					.data-block-adress-block{
+						padding-top:4%;
+						height: 4.7%;
+						display: inherit;
+						flex-direction: column;
+						flex-wrap: inherit;
+						width: 100%;
+						.adress-to-send{
+							width: 100%;
+							min-height: 54px;
+						}
+						p{
+							margin: 0%;
+							width: max-content;
+							height: min-content;
+							font-size: 14pt;
+							font-family: inherit;
+						}
+					}
+						.data-block-comment-block{
+						padding-top: 4%;
+						height: 4.7%;
+						display: inherit;
+						flex-direction: column;
+						flex-wrap: inherit;
+						width: 100%;
+						textarea{
+							width: 100%;
+							resize: none;
+							border:1px solid #b8bed8;
+						}
+							p{
+							margin: 0%;
+							width: max-content;
+							height: min-content;
+							font-size: 14pt;
+							font-family: inherit;
+							}
+						}
+						.button-block{
+							display: inherit;
+   						flex-direction: row;
+							 justify-content: flex-end;
+							 padding-top:4%;
+							.send-data{
+								border:none;
+								outline:none;
+								
+								font-size: 14pt;
+								font-family: inherit;
+								text-decoration: none;
+								background-color: #212bff;
+								border-top-right-radius: 2rem;
+								border-bottom-right-radius: 2rem;
+								border-top-left-radius: 2rem;
+    						border-bottom-left-radius: 2rem;
+								width:208px;
+								height:57px;
+								color: #f6f6f6;
+							}
+						}
+					
+					
+					
+				
+		}
+	}	
+		
+	}
+}
+
+
+
+
+
+
+
