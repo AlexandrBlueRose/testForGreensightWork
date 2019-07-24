@@ -8,8 +8,6 @@ var gulp = require('gulp'), // Подключаем Gulp
 	del = require('del'), // Подключаем библиотеку для удаления файлов и папок
 	cache = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer'); // Подключаем библиотеку для автоматического добавления префиксов
-//var autoprefixer = require('autoprefixer-core');
-
 gulp.task('less', function () { // Создаем таск Sass
 	return gulp.src('src/less/**/*.less') // Берем источник
 		.pipe(less()) // Преобразуем Sass в CSS посредством gulp-sass
@@ -81,6 +79,8 @@ gulp.task('prebuild', async function () {
 
 	var buildHtml = gulp.src('src/*.html') // Переносим HTML в продакшен
 		.pipe(gulp.dest('dist'));
+	var buildImg=gulp.src('src/img/*.png')
+		.pipe(gulp.dest('dist/img'));
 
 });
 

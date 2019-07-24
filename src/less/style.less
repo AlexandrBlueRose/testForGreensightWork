@@ -44,22 +44,14 @@
 			font-size: 14pt;
 			font-family: inherit;
 			text-decoration: none;
-			background-color: @blue;
+			background-color: @lightGray;
 			border-top-right-radius: 2rem;
 			border-bottom-right-radius: 2rem;
 			border-top-left-radius: 2rem;
 			border-bottom-left-radius: 2rem;
 			width: 208px;
 			height: 57px;
-			color: @white;
-
-			&:hover {
-				background-color: @blueHover  !important;
-			}
-
-			&:active {
-				background-color: @bluePressed  !important;
-			}
+			color: @placeholderBluelight;
 
 		}
 	}
@@ -140,19 +132,7 @@ ul {
 }
 
 body {
-	/*
-	.all-content>section 
-		display: none;
-	
-	.main-header>.buttons>button[for*="1"]:before 
-		content: "\f19a";
-	
-	.main-header>.buttons>button[for*="2"]:before 
-		content: "\f17a";
-	
-	.main-header>.buttons>.button-delivery-data:checked~.data-from-user-section, .main-header>.buttons>.button-map:checked~.form-map-section 
-		display: block;
-	*/
+
 	padding: 0 100px;
 	font-family: 'Montserrat', sans-serif;
 	background-color: @backgroundColor;
@@ -222,6 +202,7 @@ body {
 				transform-origin: 50% 100% 0;
 				z-index: 1;
 				margin-bottom: 0;
+				//для кнопки в виде обрезанного прямоугольника(не поддерживается IE11 и Edge)
 				//clip-path: url(#tabShape);
 				margin-left: -2.5%;
 				background-image: url(../img/tabOff1.png);
@@ -382,6 +363,27 @@ body {
 	position: absolute;
 	z-index: 2;
 
+	&:hover {
+		color: @blue;
+
+		.delivery-m-img {
+			.delivery-mobile-img {
+				color: @blue;
+			}
+		}
+	}
+
+	&:active {
+		color: @blue;
+
+		.delivery-m-img {
+			.delivery-mobile-img {
+				border-right: 0.1em solid @blue;
+				border-top: 0.1em solid @blue;
+			}
+		}
+	}
+
 	.delivery-m-img {
 		float: right;
 		padding-right: 31px;
@@ -393,6 +395,7 @@ body {
 			border-right: 0.1em solid @darkGray;
 			border-top: 0.1em solid @darkGray;
 			transform: rotate(135deg);
+
 
 		}
 	}
@@ -470,6 +473,10 @@ body {
 		font-size: 13pt !important;
 	}
 
+	.error {
+		font-size: 8pt !important;
+	}
+
 	.button-delivery-data {
 		display: none !important;
 	}
@@ -507,6 +514,10 @@ body {
 	input {
 		font-size: 10pt !important;
 	}
+
+	.error {
+		font-size: 6pt !important;
+	}
 }
 
 @media only screen and (max-width:350px) {
@@ -517,6 +528,11 @@ body {
 
 	input {
 		font-size: 10pt !important;
+	}
+
+	.error {
+
+		font-size: 6pt !important;
 	}
 
 	.all-content {
