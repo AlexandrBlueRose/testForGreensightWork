@@ -89,7 +89,7 @@ gulp.task('clear', function (callback) {
 })
 
 gulp.task('watch', function () {
-	gulp.watch('src/less/**/*.less', gulp.parallel('less')); // Наблюдение за sass файлами
+	gulp.watch('src/less/**/*.less', gulp.parallel('less')); // Наблюдение за less файлами
 	gulp.watch('src/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
 	gulp.watch(['src/js/*.js', 'src/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
