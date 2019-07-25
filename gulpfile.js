@@ -1,5 +1,5 @@
 var gulp = require('gulp'), // Подключаем Gulp
-	less = require('gulp-less'), //Подключаем Sass пакет,
+	less = require('gulp-less'), //Подключаем Less пакет,
 	browserSync = require('browser-sync'), // Подключаем Browser Sync
 	concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
 	uglify = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
@@ -8,9 +8,9 @@ var gulp = require('gulp'), // Подключаем Gulp
 	del = require('del'), // Подключаем библиотеку для удаления файлов и папок
 	cache = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer'); // Подключаем библиотеку для автоматического добавления префиксов
-gulp.task('less', function () { // Создаем таск Sass
+gulp.task('less', function () { // Создаем таск Less
 	return gulp.src('src/less/**/*.less') // Берем источник
-		.pipe(less()) // Преобразуем Sass в CSS посредством gulp-sass
+		.pipe(less()) // Преобразуем less в CSS посредством gulp-less
 		// @ts-ignore
 		.pipe(autoprefixer({
 			grid: true,
