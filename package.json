@@ -9,7 +9,7 @@
   "gulp": "^4.0.2",
   "gulp-less": "^4.0.1",
   "gulp-sass": "^4.0.2",
-  "jquery": "^3.4.1",
+  "jquery": "^3.5.0",
   "jquery-mask-plugin": "^1.14.15",
   "less-plugin-autoprefix": "^2.0.0",
   "npm-git-install": "^0.3.0",
